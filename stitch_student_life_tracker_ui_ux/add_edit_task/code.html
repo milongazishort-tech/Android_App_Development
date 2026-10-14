@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Add / Edit Task - Student Life Observation</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#4361ee',
+              600: '#3a57e8',
+              700: '#2d44cb',
+            },
+            slateBg: '#f8fafc',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'card': '0 2px 10px rgba(0, 0, 0, 0.03)',
+            'card-hover': '0 6px 18px rgba(58, 87, 232, 0.08)',
+            'button': '0 8px 20px rgba(58, 87, 232, 0.28)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Hide scrollbars for slick mobile viewport look */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    * {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 flex items-center justify-center min-h-screen p-0 sm:p-6 text-slate-800 antialiased selection:bg-brand-100">
+<!-- BEGIN: MobileDeviceWrapper -->
+<!-- Outer iOS Device Container (iPhone 14/15 Form Factor) -->
+<div class="w-full sm:max-w-[393px] min-h-screen sm:min-h-[852px] bg-[#fbfcfe] sm:rounded-[44px] shadow-2xl flex flex-col justify-between overflow-hidden relative border border-slate-200/60" data-purpose="mobile-screen-container">
+<!-- BEGIN: iOSStatusBar -->
+<!-- Top native iOS Status Bar elements -->
+<header class="w-full pt-3 px-7 flex justify-between items-center z-20 text-slate-900 select-none" data-purpose="ios-status-bar">
+<!-- Time Display -->
+<span class="text-[15px] font-bold tracking-tight text-slate-900">9:41</span>
+<!-- iOS Hardware Notch Indicator -->
+<div class="hidden sm:block absolute top-2.5 left-1/2 -translate-x-1/2 w-28 h-5 bg-black/5 rounded-full backdrop-blur-md"></div>
+<!-- System Status Icons (Signal, Wifi, Battery) -->
+<div class="flex items-center space-x-1.5 text-slate-900">
+<!-- Signal Icon -->
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+<path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.2.2-.2.51 0 .71.2.2.51.2.71 0l1.83-1.83C8.43 19.34 10.15 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 2c3.87 0 7 3.13 7 7 0 1.5-.47 2.89-1.28 4.03L6.97 5.28C8.36 4.47 9.9 4 12 4z"></path>
+</svg>
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 3.32c3.54 0 6.78 1.41 9.17 3.7l-9.17 9.17-9.17-9.17C5.22 8.73 8.46 7.32 12 7.32z"></path>
+</svg>
+<!-- Battery Icon -->
+<div class="w-5 h-2.5 border-[1.5px] border-slate-900 rounded-[3px] p-0.5 flex items-center relative">
+<div class="h-full w-full bg-slate-900 rounded-[1px]"></div>
+<div class="absolute -right-1 w-0.5 h-1 bg-slate-900 rounded-r-sm"></div>
+</div>
+</div>
+</header>
+<!-- END: iOSStatusBar -->
+<!-- BEGIN: MainContentArea -->
+<!-- Screen Header, Form Elements, Categories & CTA -->
+<main class="flex-1 flex flex-col px-5 pt-3 pb-8 justify-between" data-purpose="screen-content">
+<div>
+<!-- BEGIN: ScreenNavigationHeader -->
+<!-- Navigation bar with Back, Screen Title, and Save link button -->
+<nav aria-label="Screen Navigation" class="flex items-center justify-between pb-5">
+<!-- Back button -->
+<button aria-label="Go back" class="w-9 h-9 flex items-center justify-center rounded-full text-slate-700 bg-white border border-slate-200/80 shadow-sm active:scale-95 transition-transform hover:bg-slate-50" type="button">
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Screen Title -->
+<h1 class="text-base font-bold text-slate-900 tracking-tight text-center">Add Custom Task</h1>
+<!-- Top-right Save Text Action -->
+<button class="text-xs font-bold text-brand-600 hover:text-brand-700 active:opacity-75 transition-opacity px-2 py-1" type="button">
+            Save
+          </button>
+</nav>
+<!-- END: ScreenNavigationHeader -->
+<!-- BEGIN: TaskTitleSection -->
+<!-- Task Title input field -->
+<section class="mb-4" data-purpose="task-title-input">
+<label class="block text-xs font-bold text-slate-800 mb-1.5 ml-0.5" for="task-title">Task Title</label>
+<div class="relative">
+<input class="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-600 transition-all shadow-[0_1px_2px_rgba(0,0,0,0.02)]" id="task-title" name="task-title" placeholder="Enter task title" type="text">
+</div>
+</section>
+<!-- END: TaskTitleSection -->
+<!-- BEGIN: CategorySelectionSection -->
+<!-- Dropdown select and grid category picker matching Screen 7 -->
+<section class="mb-5" data-purpose="category-selection">
+<label class="block text-xs font-bold text-slate-800 mb-1.5 ml-0.5" for="category-select">Category</label>
+<!-- Category Dropdown Picker -->
+<div class="relative mb-3">
+<select class="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-600 font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-600 transition-all cursor-pointer shadow-[0_1px_2px_rgba(0,0,0,0.02)]" id="category-select">
+<option disabled="" selected="" value="">Select Category</option>
+<option value="study">Study</option>
+<option value="health">Health</option>
+<option value="spiritual">Spiritual</option>
+<option value="social">Social</option>
+<option value="learning">Learning</option>
+<option value="activity">Activity</option>
+<option value="work">Work</option>
+<option value="other">Other</option>
+</select>
+<!-- Dropdown Chevron -->
+<div class="absolute inset-y-0 right-0 flex items-center px-3.5 pointer-events-none text-slate-400">
+<svg class="w-4 h-4 stroke-[2.2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- Category Icons Grid (4 columns x 2 rows) -->
+<div class="grid grid-cols-4 gap-2.5 pt-1" data-purpose="category-grid">
+<!-- Category 1: Study (Selected Active State) -->
+<button aria-pressed="true" class="group flex flex-col items-center justify-center p-2.5 rounded-xl border border-brand-500/30 bg-brand-50/60 shadow-sm transition-all hover:border-brand-500 active:scale-95" type="button">
+<div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center text-white mb-1.5 shadow-sm">
+<!-- Graduation / Book Icon -->
+<svg class="w-5 h-5 fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24">
+<path d="M12 14l9-5-9-5-9 5 9 5z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[11px] font-bold text-brand-600">Study</span>
+</button>
+<!-- Category 2: Health -->
+<button aria-pressed="false" class="group flex flex-col items-center justify-center p-2.5 rounded-xl border border-slate-200/90 bg-white shadow-card hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95" type="button">
+<div class="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center text-slate-600 mb-1.5 group-hover:text-rose-500">
+<!-- Heart / Health Icon -->
+<svg class="w-5 h-5 fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 group-hover:text-slate-800">Health</span>
+</button>
+<!-- Category 3: Spiritual -->
+<button aria-pressed="false" class="group flex flex-col items-center justify-center p-2.5 rounded-xl border border-slate-200/90 bg-white shadow-card hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95" type="button">
+<div class="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center text-slate-600 mb-1.5 group-hover:text-indigo-500">
+<!-- Spiritual / Prayer / Mosque dome icon -->
+<svg class="w-5 h-5 fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24">
+<path d="M12 3v2m0 0c2 2 3 5 3 8H9c0-3 1-6 3-8zm-5 10v6m10-6v6m-12 0h14" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 group-hover:text-slate-800">Spiritual</span>
+</button>
+<!-- Category 4: Social -->
+<button aria-pressed="false" class="group flex flex-col items-center justify-center p-2.5 rounded-xl border border-slate-200/90 bg-white shadow-card hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95" type="button">
+<div class="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center text-slate-600 mb-1.5 group-hover:text-amber-500">
+<!-- Users / Social Icon -->
+<svg class="w-5 h-5 fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 group-hover:text-slate-800">Social</span>
+</button>
+<!-- Category 5: Learning -->
+<button aria-pressed="false" class="group flex flex-col items-center justify-center p-2.5 rounded-xl border border-slate-200/90 bg-white shadow-card hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95" type="button">
+<div class="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center text-slate-600 mb-1.5 group-hover:text-blue-500">
+<!-- Lightbulb / Learning Icon -->
+<svg class="w-5 h-5 fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 group-hover:text-slate-800">Learning</span>
+</button>
+<!-- Category 6: Activity -->
+<button aria-pressed="false" class="group flex flex-col items-center justify-center p-2.5 rounded-xl border border-slate-200/90 bg-white shadow-card hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95" type="button">
+<div class="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center text-slate-600 mb-1.5 group-hover:text-emerald-500">
+<!-- Activity / Fitness / Running Icon -->
+<svg class="w-5 h-5 fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 group-hover:text-slate-800">Activity</span>
+</button>
+<!-- Category 7: Work -->
+<button aria-pressed="false" class="group flex flex-col items-center justify-center p-2.5 rounded-xl border border-slate-200/90 bg-white shadow-card hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95" type="button">
+<div class="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center text-slate-600 mb-1.5 group-hover:text-violet-500">
+<!-- Briefcase / Work Icon -->
+<svg class="w-5 h-5 fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24">
+<path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 group-hover:text-slate-800">Work</span>
+</button>
+<!-- Category 8: Other -->
+<button aria-pressed="false" class="group flex flex-col items-center justify-center p-2.5 rounded-xl border border-slate-200/90 bg-white shadow-card hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95" type="button">
+<div class="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center text-slate-600 mb-1.5 group-hover:text-slate-900">
+<!-- Tag / More Horizontal Icon -->
+<svg class="w-5 h-5 fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24">
+<path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 group-hover:text-slate-800">Other</span>
+</button>
+</div>
+</section>
+<!-- END: CategorySelectionSection -->
+<!-- BEGIN: RemindMeSection -->
+<!-- Reminder trigger with time input and notification icon -->
+<section class="mt-4 pt-1" data-purpose="reminder-setting">
+<div class="flex items-center justify-between">
+<label class="text-xs font-bold text-slate-800" for="reminder-time-trigger">Remind Me</label>
+<!-- Time Picker Pill with Bell Icon -->
+<button class="flex items-center space-x-2 bg-white border border-slate-200/90 px-3.5 py-1.5 rounded-xl shadow-sm text-slate-700 hover:border-brand-500 hover:text-brand-600 transition-all group" id="reminder-time-trigger" type="button">
+<span class="text-xs font-semibold tracking-tight">09:00 PM</span>
+<svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-600 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</section>
+<!-- END: RemindMeSection -->
+</div>
+<!-- BEGIN: ActionButtonFooter -->
+<!-- Save Task primary elevated action button -->
+<footer class="pt-6" data-purpose="form-submission">
+<button class="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-700 text-white font-bold text-sm py-3.5 px-4 rounded-xl shadow-button transition-all transform active:scale-[0.99] flex items-center justify-center space-x-2" type="button">
+<span>Save Task</span>
+</button>
+</footer>
+<!-- END: ActionButtonFooter -->
+</main>
+<!-- END: MainContentArea -->
+<!-- BEGIN: iOSHomeIndicator -->
+<!-- Native bottom home bar indicator -->
+<div class="w-full flex justify-center pb-2.5 pt-1" data-purpose="ios-home-bar">
+<div class="w-32 h-1 bg-slate-300 rounded-full"></div>
+</div>
+<!-- END: iOSHomeIndicator -->
+</div>
+<!-- END: MobileDeviceWrapper -->
+</body></html>

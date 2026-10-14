@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="en"><head></head><body class="bg-[#f0f2f9] flex justify-center items-center min-h-screen p-0 sm:p-4 text-slate-800 antialiased font-sans select-none"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Progress Analytics - Student Life Observation</title>
+<!-- Tailwind CSS CDN with forms & container plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#3a57e8',
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#3a57e8',
+              600: '#2f45cc',
+              700: '#2434ab',
+            },
+            canvas: '#f8f9fe',
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(58, 87, 232, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03)',
+            'card': '0 10px 25px -5px rgba(50, 65, 110, 0.06)',
+            'nav': '0 -4px 20px 0 rgba(0, 0, 0, 0.05)',
+            'fab': '0 8px 18px 0 rgba(58, 87, 232, 0.38)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-utilities">
+    /* Custom styling for precise mobile feel and smooth gradient charts */
+    body {
+      -webkit-tap-highlight-color: transparent;
+      overscroll-behavior-y: none;
+    }
+    .chart-grid-line {
+      stroke: #edf2f7;
+      stroke-dasharray: 4, 4;
+    }
+  </style>
+
+
+<!-- BEGIN: MobileContainer -->
+<!-- iPhone Form Factor Wrapper -->
+<div class="w-full max-w-sm sm:max-w-[400px] h-[100dvh] sm:h-[844px] bg-[#f8f9fe] sm:rounded-[40px] shadow-2xl flex flex-col overflow-hidden relative border-0 sm:border-[8px] sm:border-slate-900">
+<!-- BEGIN: iOSStatusBar -->
+<!-- Top Notch & Status Indicators -->
+<header class="w-full pt-3 px-6 pb-2 flex justify-between items-center text-xs font-semibold text-slate-900 shrink-0 z-30" data-purpose="status-bar">
+<span class="tracking-tight text-sm font-bold">9:41</span>
+<div class="flex items-center space-x-2 text-slate-900">
+<!-- Cellular Signal Icon -->
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 18.25A10.938 10.938 0 0 1 1 12C1 5.92 5.92 1 12 1s11 4.92 11 11c0 2.37-.75 4.57-2.02 6.38l-.62-.64A8.96 8.96 0 0 0 21 12c0-4.97-4.03-9-9-9z"></path>
+<path d="M2 19h20v2H2z" opacity="0.3"></path>
+<circle cx="12" cy="12" r="3"></circle>
+</svg>
+<!-- Wi-Fi Icon -->
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A17.88 17.88 0 0 0 12 4zm0 3.5c3.6 0 6.9 1.34 9.4 3.56L12 19.34 2.6 11.06A14.4 14.4 0 0 1 12 7.5z"></path>
+</svg>
+<!-- Battery Icon -->
+<div class="flex items-center">
+<div class="w-5 h-2.5 border border-slate-900 rounded-sm p-0.5 flex items-center">
+<div class="w-3 h-1.5 bg-slate-900 rounded-2xs"></div>
+</div>
+<div class="w-0.5 h-1 bg-slate-900 rounded-r-xs ml-px"></div>
+</div>
+</div>
+</header>
+<!-- END: iOSStatusBar -->
+<!-- BEGIN: ScreenHeader -->
+<!-- App Navigation Header -->
+<div class="px-5 py-2.5 flex items-center justify-between shrink-0" data-purpose="screen-header">
+<div class="w-9 h-9"></div>
+<h1 class="text-base font-bold text-slate-900 tracking-tight">Progress Analytics</h1>
+<button aria-label="More Options" class="w-9 h-9 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center text-slate-700 active:scale-95 transition-transform">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+<circle cx="5" cy="12" r="2"></circle>
+<circle cx="12" cy="12" r="2"></circle>
+<circle cx="19" cy="12" r="2"></circle>
+</svg>
+</button>
+</div>
+<!-- END: ScreenHeader -->
+<!-- BEGIN: ScrollableContent -->
+<main class="flex-1 overflow-y-auto px-5 pt-1 pb-24 space-y-4 no-scrollbar">
+<!-- BEGIN: TimeRangeFilter -->
+<!-- Weekly / Monthly / Yearly Selector -->
+<section class="bg-slate-200/60 p-1 rounded-2xl flex items-center" data-purpose="range-tabs">
+<button class="flex-1 py-1.5 text-xs font-semibold text-slate-500 rounded-xl hover:text-slate-700 transition">
+          Weekly
+        </button>
+<button class="flex-1 py-1.5 text-xs font-bold text-white bg-brand shadow-sm rounded-xl transition">
+          Monthly
+        </button>
+<button class="flex-1 py-1.5 text-xs font-semibold text-slate-500 rounded-xl hover:text-slate-700 transition">
+          Yearly
+        </button>
+</section>
+<!-- END: TimeRangeFilter -->
+<!-- BEGIN: MonthlyOverviewChartCard -->
+<!-- Interactive Visual Progress Curve -->
+<section class="bg-white rounded-3xl p-4 shadow-card border border-slate-100/80 relative" data-purpose="chart-container">
+<div class="flex items-center justify-between mb-2">
+<div>
+<h2 class="text-xs font-medium text-slate-400 uppercase tracking-wider">Overview</h2>
+<p class="text-base font-bold text-slate-900">Monthly Progress</p>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-600 border border-emerald-100">
+<svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+            +24% Growth
+          </span>
+</div>
+<!-- SVG Line Chart Area -->
+<div class="relative w-full h-44 pt-2">
+<svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 320 140">
+<defs>
+<!-- Gradient fill under line -->
+<linearGradient id="areaGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#3a57e8" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#3a57e8" stop-opacity="0.0"></stop>
+</linearGradient>
+<!-- Line gradient -->
+<linearGradient id="lineGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#3a57e8"></stop>
+<stop offset="100%" stop-color="#6366f1"></stop>
+</linearGradient>
+</defs>
+<!-- Horizontal Gridlines & Y-Axis Percentages -->
+<!-- 100% -->
+<line class="chart-grid-line" stroke-width="1" x1="28" x2="310" y1="10" y2="10"></line>
+<text class="text-[9px] fill-slate-300 font-medium" x="0" y="13">100%</text>
+<!-- 75% -->
+<line class="chart-grid-line" stroke-width="1" x1="28" x2="310" y1="40" y2="40"></line>
+<text class="text-[9px] fill-slate-300 font-medium" x="3" y="43">75%</text>
+<!-- 50% -->
+<line class="chart-grid-line" stroke-width="1" x1="28" x2="310" y1="70" y2="70"></line>
+<text class="text-[9px] fill-slate-300 font-medium" x="3" y="73">50%</text>
+<!-- 25% -->
+<line class="chart-grid-line" stroke-width="1" x1="28" x2="310" y1="100" y2="100"></line>
+<text class="text-[9px] fill-slate-300 font-medium" x="3" y="103">25%</text>
+<!-- 0% -->
+<line stroke="#f1f5f9" stroke-width="1.2" x1="28" x2="310" y1="130" y2="130"></line>
+<text class="text-[9px] fill-slate-300 font-medium" x="8" y="133">0%</text>
+<!-- Area polygon (Week1: 52% -> y=67.6, Week2: 58% -> y=60.4, Week3: 68% -> y=48.4, Week4: 76% -> y=38.8) -->
+<!-- X anchors: W1=50, W2=130, W3=210, W4=290 -->
+<path d="M 50 67.6 
+                     C 90 64, 90 60.4, 130 60.4 
+                     C 170 60.4, 170 48.4, 210 48.4 
+                     C 250 48.4, 250 38.8, 290 38.8 
+                     L 290 130 L 50 130 Z" fill="url(#areaGradient)"></path>
+<!-- Smooth Trend Line -->
+<path d="M 50 67.6 
+                     C 90 64, 90 60.4, 130 60.4 
+                     C 170 60.4, 170 48.4, 210 48.4 
+                     C 250 48.4, 250 38.8, 290 38.8" fill="none" stroke="url(#lineGrad)" stroke-linecap="round" stroke-width="3"></path>
+<!-- Point 1 (Week 1: 52%) -->
+<circle cx="50" cy="67.6" fill="#ffffff" r="4.5" stroke="#3a57e8" stroke-width="2.5"></circle>
+<text class="text-[10px] font-bold fill-slate-600" text-anchor="middle" x="50" y="55">52%</text>
+<!-- Point 2 (Week 2: 58%) -->
+<circle cx="130" cy="60.4" fill="#ffffff" r="4.5" stroke="#3a57e8" stroke-width="2.5"></circle>
+<text class="text-[10px] font-bold fill-slate-600" text-anchor="middle" x="130" y="48">58%</text>
+<!-- Point 3 (Week 3: 68%) -->
+<circle cx="210" cy="48.4" fill="#ffffff" r="4.5" stroke="#4f46e5" stroke-width="2.5"></circle>
+<text class="text-[10px] font-bold fill-slate-600" text-anchor="middle" x="210" y="36">68%</text>
+<!-- Point 4 (Week 4: 76%) with pulse indicator ring -->
+<circle cx="290" cy="38.8" fill="#3a57e8" fill-opacity="0.15" r="8"></circle>
+<circle cx="290" cy="38.8" fill="#ffffff" r="4.5" stroke="#3a57e8" stroke-width="2.5"></circle>
+<text class="text-[10.5px] font-black fill-brand" text-anchor="middle" x="290" y="24">76%</text>
+</svg>
+</div>
+<!-- Chart X-Axis Labels -->
+<div class="grid grid-cols-4 pl-7 pr-2 mt-2 text-center">
+<span class="text-[10.5px] font-medium text-slate-400">Week 1</span>
+<span class="text-[10.5px] font-medium text-slate-400">Week 2</span>
+<span class="text-[10.5px] font-medium text-slate-400">Week 3</span>
+<span class="text-[10.5px] font-bold text-brand">Week 4</span>
+</div>
+</section>
+<!-- END: MonthlyOverviewChartCard -->
+<!-- BEGIN: MonthSummaryCards -->
+<!-- 3-Column Performance Indicators -->
+<section class="space-y-1.5" data-purpose="metrics-summary">
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider px-1">This Month Summary</h3>
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Avg Score -->
+<div class="bg-white rounded-2xl p-3 border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center">
+<span class="text-[11px] font-medium text-slate-400">Avg Score</span>
+<span class="text-xl font-extrabold text-brand mt-0.5">69%</span>
+<span class="text-[9px] text-slate-400 mt-0.5 flex items-center">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1"></span>Good
+            </span>
+</div>
+<!-- Best Day -->
+<div class="bg-white rounded-2xl p-3 border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center">
+<span class="text-[11px] font-medium text-slate-400">Best Day</span>
+<span class="text-xl font-extrabold text-emerald-600 mt-0.5">92%</span>
+<span class="text-[9px] text-slate-400 mt-0.5">Day 24</span>
+</div>
+<!-- Total Days -->
+<div class="bg-white rounded-2xl p-3 border border-slate-100 shadow-sm flex flex-col items-center justify-center text-center">
+<span class="text-[11px] font-medium text-slate-400">Total Days</span>
+<span class="text-xl font-extrabold text-slate-800 mt-0.5">30</span>
+<span class="text-[9px] text-brand font-medium mt-0.5">Full Streak</span>
+</div>
+</div>
+</section>
+<!-- END: MonthSummaryCards -->
+<!-- BEGIN: CategoryBreakdownCard -->
+<!-- Top Categories Performance with Linear Progress Bars -->
+<section class="bg-white rounded-3xl p-4 shadow-card border border-slate-100/80 space-y-3.5" data-purpose="category-performance">
+<div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+<div class="flex items-center space-x-2">
+<div class="w-6 h-6 rounded-lg bg-brand/10 flex items-center justify-center text-brand">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-sm font-bold text-slate-900">Top Categories</h3>
+</div>
+<span class="text-[11px] font-semibold text-brand hover:underline cursor-pointer">View All</span>
+</div>
+<div class="space-y-3">
+<!-- Study Item (85%) -->
+<div class="space-y-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-semibold text-slate-700 flex items-center">
+<span class="w-2 h-2 rounded-full bg-blue-600 mr-2"></span>Study
+              </span>
+<span class="font-bold text-slate-900">85%</span>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-blue-600 rounded-full transition-all duration-500" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Learning Item (72%) -->
+<div class="space-y-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-semibold text-slate-700 flex items-center">
+<span class="w-2 h-2 rounded-full bg-indigo-500 mr-2"></span>Learning
+              </span>
+<span class="font-bold text-slate-900">72%</span>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-indigo-500 rounded-full transition-all duration-500" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Health Item (60%) -->
+<div class="space-y-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-semibold text-slate-700 flex items-center">
+<span class="w-2 h-2 rounded-full bg-teal-500 mr-2"></span>Health
+              </span>
+<span class="font-bold text-slate-900">60%</span>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-teal-500 rounded-full transition-all duration-500" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Social Item (55%) -->
+<div class="space-y-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-semibold text-slate-700 flex items-center">
+<span class="w-2 h-2 rounded-full bg-amber-500 mr-2"></span>Social
+              </span>
+<span class="font-bold text-slate-900">55%</span>
+</div>
+<div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full transition-all duration-500" style="width: 55%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CategoryBreakdownCard -->
+</main>
+<!-- END: ScrollableContent -->
+<!-- BEGIN: BottomNavigation -->
+<!-- Fixed Navigation Bar with Elevated Plus Action Button -->
+<nav class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-slate-100 px-6 py-2.5 flex items-center justify-between shadow-nav z-40" data-purpose="bottom-navigation">
+<!-- Nav Item: Home -->
+<a class="flex flex-col items-center text-slate-400 hover:text-slate-600 transition" href="#home">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] mt-1 font-medium">Home</span>
+</a>
+<!-- Nav Item: Calendar -->
+<a class="flex flex-col items-center text-slate-400 hover:text-slate-600 transition" href="#calendar">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<rect height="18" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round" width="18" x="3" y="4"></rect>
+<line stroke-linecap="round" stroke-linejoin="round" x1="16" x2="16" y1="2" y2="6"></line>
+<line stroke-linecap="round" stroke-linejoin="round" x1="8" x2="8" y1="2" y2="6"></line>
+<line stroke-linecap="round" stroke-linejoin="round" x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+<span class="text-[10px] mt-1 font-medium">Calendar</span>
+</a>
+<!-- Floating Center Action Button (Add Task) -->
+<div class="relative -top-3">
+<button aria-label="Add observation" class="w-12 h-12 rounded-full bg-brand hover:bg-brand-600 text-white flex items-center justify-center shadow-fab active:scale-95 transition-all">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+<path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- Nav Item: Progress (Active) -->
+<a class="flex flex-col items-center text-brand relative" href="#progress">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] mt-1 font-bold">Progress</span>
+<!-- Small Active Dot Indicator -->
+<span class="w-1.5 h-1.5 bg-brand rounded-full absolute -bottom-1"></span>
+</a>
+<!-- Nav Item: Profile -->
+<a class="flex flex-col items-center text-slate-400 hover:text-slate-600 transition" href="#profile">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] mt-1 font-medium">Profile</span>
+</a>
+</nav>
+<!-- END: BottomNavigation -->
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-slate-300 rounded-full pointer-events-none z-50"></div>
+</div>
+<!-- END: MobileContainer -->
+
+
+</body></html>

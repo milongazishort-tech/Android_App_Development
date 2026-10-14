@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="24dp">
+
+        <!-- Screen Navigation Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="20dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_pill_button"
+                android:backgroundTint="@color/white"
+                android:elevation="2dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/text_primary"
+                android:contentDescription="@string/cd_back_button" />
+
+            <TextView
+                android:id="@+id/tvScreenTitle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/add_custom_task"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/btnSaveTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- Task Title Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/task_title"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTaskTitle"
+            style="@style/Widget.App.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTaskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:hint="@string/enter_task_title"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Category Dropdown / Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Category 8-Grid (4 columns x 2 rows) -->
+        <GridLayout
+            android:id="@+id/gridCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true">
+
+            <!-- 1. Study -->
+            <LinearLayout
+                android:id="@+id/catStudy"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="76dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card_stitch"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/ivCatStudy"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_cat_study" />
+
+                <TextView
+                    android:id="@+id/tvCatStudy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Study"
+                    android:textColor="@color/text_primary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 2. Health -->
+            <LinearLayout
+                android:id="@+id/catHealth"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="76dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card_stitch"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/ivCatHealth"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_cat_health" />
+
+                <TextView
+                    android:id="@+id/tvCatHealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 3. Spiritual -->
+            <LinearLayout
+                android:id="@+id/catSpiritual"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="76dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card_stitch"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/ivCatSpiritual"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_cat_spiritual" />
+
+                <TextView
+                    android:id="@+id/tvCatSpiritual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spiritual"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 4. Social -->
+            <LinearLayout
+                android:id="@+id/catSocial"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="76dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card_stitch"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/ivCatSocial"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_cat_social" />
+
+                <TextView
+                    android:id="@+id/tvCatSocial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Social"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 5. Learning -->
+            <LinearLayout
+                android:id="@+id/catLearning"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="76dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card_stitch"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/ivCatLearning"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_cat_learning" />
+
+                <TextView
+                    android:id="@+id/tvCatLearning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Learning"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 6. Activity -->
+            <LinearLayout
+                android:id="@+id/catActivity"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="76dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card_stitch"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/ivCatActivity"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_cat_activity" />
+
+                <TextView
+                    android:id="@+id/tvCatActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Activity"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 7. Work -->
+            <LinearLayout
+                android:id="@+id/catWork"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="76dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card_stitch"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/ivCatWork"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_cat_work" />
+
+                <TextView
+                    android:id="@+id/tvCatWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Work"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 8. Other -->
+            <LinearLayout
+                android:id="@+id/catOther"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="76dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card_stitch"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp">
+
+                <ImageView
+                    android:id="@+id/ivCatOther"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_cat_other" />
+
+                <TextView
+                    android:id="@+id/tvCatOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <!-- Remind Me Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/remind_me"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/btnReminderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_card_stitch"
+                android:paddingHorizontal="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/tvReminderTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:00 PM"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_notification"
+                    app:tint="@color/primary"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Primary Action: Save Task -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveTask"
+            style="@style/Widget.App.Button.Rounded"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/save_task"
+            android:layout_marginTop="40dp" />
+
+    </LinearLayout>
+</ScrollView>

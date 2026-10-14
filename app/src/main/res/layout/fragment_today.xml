@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- Top Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="52dp"
+            android:paddingBottom="12dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Tracking"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvTodayDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDayBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_day_badge"
+                android:text="Day 1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp" />
+        </LinearLayout>
+
+        <!-- Loading state -->
+        <ProgressBar
+            android:id="@+id/loadingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:indeterminateTint="@color/accent"
+            android:visibility="gone" />
+
+        <!-- Activities Form -->
+        <LinearLayout
+            android:id="@+id/formContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <!-- 1. Wake Early -->
+            <include layout="@layout/item_activity_toggle"
+                android:id="@+id/actWakeEarly" />
+
+            <!-- 2. University Attendance -->
+            <include layout="@layout/item_activity_toggle"
+                android:id="@+id/actUniversity" />
+
+            <!-- 3. Class Participation -->
+            <include layout="@layout/item_activity_classes"
+                android:id="@+id/actClasses" />
+
+            <!-- 4. Personal Routine -->
+            <include layout="@layout/item_activity_toggle"
+                android:id="@+id/actPersonalRoutine" />
+
+            <!-- 5. Social Interaction -->
+            <include layout="@layout/item_activity_counter"
+                android:id="@+id/actSocialInteraction" />
+
+            <!-- 6. Daily Learning -->
+            <include layout="@layout/item_activity_text"
+                android:id="@+id/actDailyLearning" />
+
+            <!-- 7. Physical Activity -->
+            <include layout="@layout/item_activity_duration"
+                android:id="@+id/actPhysicalActivity" />
+
+            <!-- 8. Skill Development -->
+            <include layout="@layout/item_activity_duration"
+                android:id="@+id/actSkillDevelopment" />
+
+            <!-- 9. Class Recap -->
+            <include layout="@layout/item_activity_toggle"
+                android:id="@+id/actClassRecap" />
+
+            <!-- 10. Social Media -->
+            <include layout="@layout/item_activity_social_media"
+                android:id="@+id/actSocialMedia" />
+
+            <!-- 11. Self-Reflection -->
+            <include layout="@layout/item_activity_reflection"
+                android:id="@+id/actReflection" />
+
+            <!-- 12. Sleep on Time -->
+            <include layout="@layout/item_activity_toggle"
+                android:id="@+id/actSleepOnTime" />
+
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveActivities"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Save Today's Activities"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="14dp"
+            android:elevation="4dp" />
+
+        <ProgressBar
+            android:id="@+id/savingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:indeterminateTint="@color/accent"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

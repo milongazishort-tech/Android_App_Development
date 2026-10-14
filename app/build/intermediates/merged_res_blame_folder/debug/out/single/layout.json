@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_main.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_login.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/item_activity_classes.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/item_activity_classes.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/item_activity_text.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/item_activity_text.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_today_tasks.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_today_tasks.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_settings.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/item_activity_reflection.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/item_activity_reflection.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/fragment_calendar.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/fragment_calendar.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/item_activity_counter.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/item_activity_counter.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/fragment_progress.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/fragment_progress.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_detailed_prediction.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_detailed_prediction.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/item_activity_duration.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/item_activity_duration.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_splash.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/item_activity_toggle.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/item_activity_toggle.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_register.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/item_calendar_day.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/item_calendar_day.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_edit_profile.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_edit_profile.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/fragment_today.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/fragment_today.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_life_stage_prediction.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_life_stage_prediction.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_add_edit_task.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_add_edit_task.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_onboarding.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_onboarding.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/fragment_home.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/fragment_insight.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/fragment_insight.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/fragment_profile.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/item_today_task.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/item_today_task.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/item_activity_social_media.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/item_activity_social_media.xml"
+    },
+    {
+        "merged": "com.studentlife.tracker.app-mergeDebugResources-53:/layout/activity_forgot_password.xml",
+        "source": "com.studentlife.tracker.app-main-56:/layout/activity_forgot_password.xml"
+    }
+]

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "Figma": {
+      "serverUrl": "https://mcp.figma.com/mcp",
+      "url": "https://mcp.figma.com/mcp"
+    },
+    "figma-dev-mode-mcp-server": {
+      "serverUrl": "https://mcp.figma.com/mcp",
+      "url": "https://mcp.figma.com/mcp"
+    }
+  }
+}

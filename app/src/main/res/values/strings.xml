@@ -1,0 +1,146 @@
+<resources>
+    <!-- App Branding -->
+    <string name="app_name">Student Life Observation</string>
+    <string name="app_slogan">Observe Today. Improve Tomorrow.</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Understand Yourself, Improve Your Life</string>
+    <string name="onboarding_subtitle">Track your daily activities, build good habits and become a better version of yourself.</string>
+    <string name="get_started">Get Started</string>
+
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="send_reset_link">Send Reset Link</string>
+    <string name="full_name">Full Name</string>
+    <string name="email_address">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="university">University</string>
+    <string name="department">Department</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="create_account">Create Account</string>
+    <string name="start_transformation">Start your 30-day transformation</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome_back">Welcome Back! 👋</string>
+    <string name="login_continue">Login to continue your journey</string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_email_reset">Enter your email to receive a password reset link.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="nav_add">Add</string>
+    <string name="nav_today">Today</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_insights">Insights</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Home Dashboard -->
+    <string name="good_morning">Good Morning,</string>
+    <string name="day_progress">Day %1$d / 30</string>
+    <string name="keep_going">Keep going! You\'re doing great.</string>
+    <string name="tasks_today">Tasks Today</string>
+    <string name="completed">Completed</string>
+    <string name="score">Score</string>
+    <string name="today_progress">Today\'s Progress</string>
+    <string name="view_details">View Details</string>
+    <string name="great_progress">Great Progress!</string>
+    <string name="streak">Streak</string>
+    <string name="best_streak">Best Streak</string>
+    <string name="next_up">Next Up</string>
+    <string name="all_tasks">All (%1$d)</string>
+
+    <!-- Today's Tasks -->
+    <string name="todays_tasks">Today\'s Tasks</string>
+    <string name="observation_progress">Observation Progress</string>
+    <string name="tasks_completed_count">%1$d of %2$d Completed</string>
+
+    <!-- Categories -->
+    <string name="cat_all">All</string>
+    <string name="category_study">Study</string>
+    <string name="category_health">Health</string>
+    <string name="category_spiritual">Spiritual</string>
+    <string name="category_social">Social</string>
+    <string name="category_learning">Learning</string>
+    <string name="category_activity">Activity</string>
+    <string name="category_work">Work</string>
+    <string name="category_career">Career</string>
+    <string name="category_other">Other</string>
+
+    <!-- Add / Edit Task -->
+    <string name="add_custom_task">Add Custom Task</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="task_title">Task Title</string>
+    <string name="enter_task_title">Enter task title</string>
+    <string name="category">Category</string>
+    <string name="select_category">Select Category</string>
+    <string name="remind_me">Remind Me</string>
+    <string name="save_task">Save Task</string>
+    <string name="save">Save</string>
+
+    <!-- Calendar -->
+    <string name="calendar_view">Calendar View</string>
+    <string name="day_summary">Day Summary</string>
+    <string name="active_day">Active Day</string>
+    <string name="tasks_completed">Tasks Completed</string>
+
+    <!-- Analytics -->
+    <string name="progress_analytics">Progress Analytics</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+    <string name="overview">Overview</string>
+    <string name="monthly_progress">Monthly Progress</string>
+    <string name="this_month_summary">This Month Summary</string>
+    <string name="avg_score">Avg Score</string>
+    <string name="best_day">Best Day</string>
+    <string name="total_days">Total Days</string>
+    <string name="top_categories">Top Categories</string>
+    <string name="view_all">View All</string>
+
+    <!-- Life Stage & Prediction -->
+    <string name="your_life_stage">Your Life Stage</string>
+    <string name="stage_number">Stage %1$d</string>
+    <string name="right_track">You are on the right track! 🚀</string>
+    <string name="life_stage_10_levels">Life Stage (10 Levels)</string>
+    <string name="current_level_of">Current level %1$d of 10</string>
+    <string name="view_detailed_prediction">View Detailed Prediction</string>
+    <string name="your_30_day_life_report">Your 30-Day Life Report</string>
+    <string name="great_job">Great Job! 🎉</string>
+    <string name="report_congrats">You have completed 30 days of self observation. Here is your personalized analysis based on your performance.</string>
+    <string name="dimensions_evaluation">Dimensions Evaluation</string>
+    <string name="stage_prediction_30_day">30-Day Stage Prediction</string>
+    <string name="view_full_report">View Full Report</string>
+    <string name="download_summary_pdf">Download Summary (PDF)</string>
+
+    <!-- Profile & Settings -->
+    <string name="profile">Profile</string>
+    <string name="days_completed">Days Completed</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="my_goals">My Goals</string>
+    <string name="reminders">Reminders</string>
+    <string name="settings">Settings</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="app_version_label">Student Life Observation v1.0.4</string>
+    <string name="app_footer_subtitle">30-Day Growth &amp; Habit Tracker</string>
+
+    <!-- Errors -->
+    <string name="error_empty_name">Please enter your full name.</string>
+    <string name="error_empty_email">Please enter your email address.</string>
+    <string name="error_invalid_email">Please enter a valid email address.</string>
+    <string name="error_empty_password">Please enter a password.</string>
+    <string name="error_password_too_short">Password must be at least 6 characters.</string>
+    <string name="error_passwords_mismatch">Passwords do not match.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+
+    <!-- Accessibility Descriptions -->
+    <string name="cd_profile_image">Profile picture</string>
+    <string name="cd_app_logo">Student Life logo</string>
+    <string name="cd_back_button">Go back</string>
+</resources>

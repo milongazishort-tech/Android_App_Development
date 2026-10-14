@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Day Number Bubble -->
+    <TextView
+        android:id="@+id/tvDayNumber"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:text="20"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Observation Indicator Dot -->
+    <View
+        android:id="@+id/dotIndicator"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="@drawable/bg_pill_button"
+        android:backgroundTint="@color/primary"
+        android:layout_marginTop="2dp"
+        android:visibility="gone" />
+
+</LinearLayout>

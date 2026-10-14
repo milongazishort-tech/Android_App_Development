@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Stitch Spacing Model (4px/8px rhythmic) -->
+    <dimen name="spacing_xxs">2dp</dimen>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+    <dimen name="screen_margin">20dp</dimen>
+    <dimen name="screen_gutter">16dp</dimen>
+
+    <!-- Stitch Corner Radii -->
+    <dimen name="radius_xs">4dp</dimen>
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">24dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_radius_lg">24dp</dimen>
+    <dimen name="button_radius">999dp</dimen>
+    <dimen name="input_radius">16dp</dimen>
+
+    <!-- Component Sizing -->
+    <dimen name="btn_height">52dp</dimen>
+    <dimen name="btn_height_sm">40dp</dimen>
+    <dimen name="input_height">52dp</dimen>
+    <dimen name="checkbox_size">22dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="top_bar_height">56dp</dimen>
+
+    <!-- Typography Scales (Plus Jakarta Sans equivalent) -->
+    <dimen name="text_headline_xl">32sp</dimen>
+    <dimen name="text_headline_lg">24sp</dimen>
+    <dimen name="text_headline_md">20sp</dimen>
+    <dimen name="text_headline_sm">18sp</dimen>
+    <dimen name="text_body_lg">16sp</dimen>
+    <dimen name="text_body_md">14sp</dimen>
+    <dimen name="text_body_sm">12sp</dimen>
+    <dimen name="text_label_lg">14sp</dimen>
+    <dimen name="text_label_md">12sp</dimen>
+    <dimen name="text_label_sm">10sp</dimen>
+
+    <dimen name="text_xs">10sp</dimen>
+    <dimen name="text_sm">12sp</dimen>
+    <dimen name="text_md">14sp</dimen>
+    <dimen name="text_lg">16sp</dimen>
+    <dimen name="text_xl">18sp</dimen>
+    <dimen name="text_xxl">24sp</dimen>
+    <dimen name="text_display">32sp</dimen>
+    <dimen name="text_score">56sp</dimen>
+
+    <!-- Metrics, Progress & Avatars -->
+    <dimen name="progress_ring_size">80dp</dimen>
+    <dimen name="progress_ring_stroke">8dp</dimen>
+    <dimen name="avatar_size">44dp</dimen>
+    <dimen name="avatar_size_lg">96dp</dimen>
+    <dimen name="icon_sm">18dp</dimen>
+    <dimen name="icon_md">22dp</dimen>
+    <dimen name="icon_lg">28dp</dimen>
+</resources>

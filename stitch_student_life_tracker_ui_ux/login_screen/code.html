@@ -1,0 +1,250 @@
+<!DOCTYPE html><html class="h-full" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Login - Student Life Observation</title>
+<!-- Plus Jakarta Sans Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "outline-variant": "#c5c5d8",
+            "on-error-container": "#93000a",
+            "surface": "#faf8ff",
+            "tertiary-fixed-dim": "#ffb95f",
+            "surface-container-lowest": "#ffffff",
+            "background": "#faf8ff",
+            "secondary-fixed-dim": "#4edea3",
+            "primary-fixed": "#dee0ff",
+            "on-tertiary-fixed": "#2a1700",
+            "surface-container-high": "#e2e7ff",
+            "primary-container": "#3a57e8",
+            "surface-container-highest": "#dae2fd",
+            "surface-variant": "#dae2fd",
+            "primary": "#173bd0",
+            "primary-fixed-dim": "#bac3ff",
+            "inverse-on-surface": "#eef0ff",
+            "on-secondary-fixed-variant": "#005236",
+            "on-primary-container": "#e3e5ff",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#bac3ff",
+            "secondary-fixed": "#6ffbbe",
+            "surface-dim": "#d2d9f4",
+            "tertiary-fixed": "#ffddb8",
+            "on-surface": "#131b2e",
+            "error": "#ba1a1a",
+            "outline": "#757686",
+            "on-primary-fixed": "#00105b",
+            "on-primary-fixed-variant": "#0130c8",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed": "#002113",
+            "on-tertiary-container": "#ffe1c2",
+            "surface-bright": "#faf8ff",
+            "secondary-container": "#6cf8bb",
+            "on-background": "#131b2e",
+            "surface-container-low": "#f2f3ff",
+            "surface-container": "#eaedff",
+            "surface-tint": "#2f4ddf",
+            "on-secondary-container": "#00714d",
+            "tertiary": "#704600",
+            "inverse-surface": "#283044",
+            "secondary": "#006c49",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed-variant": "#653e00",
+            "on-surface-variant": "#444655",
+            "tertiary-container": "#915b00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "1.25rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "label-sm": ["10px", { "lineHeight": "12px", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex items-center justify-center p-0 md:p-6 select-none selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Mobile Viewport Frame -->
+<main class="w-full max-w-[412px] min-h-screen md:min-h-[860px] md:h-[860px] bg-surface flex flex-col justify-between relative md:rounded-[40px] md:border md:border-outline-variant/30 md:shadow-[0_20px_50px_rgba(58,87,232,0.12)] overflow-hidden">
+<!-- Top System Status Bar -->
+<header class="w-full pt-3 px-6 pb-2 flex justify-between items-center text-on-surface select-none z-20">
+<span class="font-headline-sm text-label-md text-on-surface font-semibold tracking-tight">9:41</span>
+<div class="flex items-center space-x-2 text-on-surface">
+<span class="material-symbols-outlined text-[17px]" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px]" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[19px]" data-icon="battery_full">battery_full</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<section class="flex-1 px-margin pt-10 pb-6 flex flex-col justify-center max-w-sm mx-auto w-full">
+<!-- Screen 3 Reference: Greeting & Header -->
+<div class="text-center mb-8">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-2 flex items-center justify-center gap-1.5">
+<span>Welcome Back!</span>
+<span class="inline-block transform hover:rotate-12 transition-transform duration-200">👋</span>
+</h1>
+<p class="font-body-md text-body-md text-outline">
+          Login to continue your journey
+        </p>
+</div>
+<!-- Auth Form -->
+<form class="space-y-4 w-full" onsubmit="event.preventDefault();">
+<!-- Email Input -->
+<div class="space-y-1.5">
+<label class="sr-only" for="email">Email</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline pointer-events-none" data-icon="mail">mail</span>
+<input class="w-full h-[52px] pl-12 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline-variant border border-outline-variant/40 rounded-2xl font-body-md text-body-md focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all shadow-[0_4px_20px_-2px_rgba(58,87,232,0.03)]" id="email" name="email" placeholder="Email" required="" type="email">
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-1.5">
+<label class="sr-only" for="password">Password</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline pointer-events-none" data-icon="lock">lock</span>
+<input class="w-full h-[52px] pl-12 pr-12 bg-surface-container-lowest text-on-surface placeholder:text-outline-variant border border-outline-variant/40 rounded-2xl font-body-md text-body-md focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 focus:outline-none transition-all shadow-[0_4px_20px_-2px_rgba(58,87,232,0.03)]" id="password" name="password" placeholder="Password" required="" type="password">
+<button aria-label="Toggle password visibility" class="absolute right-4 text-outline hover:text-on-surface focus:outline-none p-1 flex items-center justify-center" id="togglePassword" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="visibility" id="eyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Forgot Password Link -->
+<div class="flex justify-end pt-1">
+<a class="font-label-md text-label-md text-outline hover:text-primary transition-colors focus:outline-none focus:underline" href="#">
+            Forgot Password?
+          </a>
+</div>
+<!-- Primary Action Button: Login -->
+<div class="pt-2">
+<button class="w-full h-[52px] bg-primary-container text-on-primary rounded-full font-label-lg text-label-lg tracking-wide shadow-[0_10px_25px_-4px_rgba(58,87,232,0.3)] hover:bg-primary active:scale-[0.98] transition-all duration-150 flex items-center justify-center cursor-pointer" type="submit">
+            Login
+          </button>
+</div>
+</form>
+<!-- Social Logins Divider -->
+<div class="relative flex py-7 items-center">
+<div class="flex-grow border-t border-outline-variant/40"></div>
+<span class="flex-shrink mx-4 text-outline font-body-sm text-body-sm select-none">
+          or continue with
+        </span>
+<div class="flex-grow border-t border-outline-variant/40"></div>
+</div>
+<!-- Social Login Buttons Row -->
+<div class="flex justify-center items-center gap-4">
+<!-- Google -->
+<button aria-label="Continue with Google" class="w-14 h-14 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl flex items-center justify-center shadow-[0_4px_16px_-2px_rgba(58,87,232,0.04)] hover:border-primary-container/40 active:scale-95 transition-all group" type="button">
+<svg class="w-5 h-5 transition-transform group-hover:scale-105" viewBox="0 0 24 24">
+<path d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" fill="#EA4335"></path>
+<path d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z" fill="#4285F4"></path>
+<path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3 0-.8.1-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15s.7 5.3 1.9 7.7l3.7-2.9z" fill="#FBBC05"></path>
+<path d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 16c1.8 3.7 5.6 7 10.1 7z" fill="#34A853"></path>
+</svg>
+</button>
+<!-- Facebook -->
+<button aria-label="Continue with Facebook" class="w-14 h-14 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl flex items-center justify-center shadow-[0_4px_16px_-2px_rgba(58,87,232,0.04)] hover:border-primary-container/40 active:scale-95 transition-all group" type="button">
+<svg class="w-5 h-5 text-[#1877F2] fill-current transition-transform group-hover:scale-105" viewBox="0 0 24 24">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg>
+</button>
+<!-- Apple -->
+<button aria-label="Continue with Apple" class="w-14 h-14 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl flex items-center justify-center shadow-[0_4px_16px_-2px_rgba(58,87,232,0.04)] hover:border-primary-container/40 active:scale-95 transition-all group" type="button">
+<svg class="w-5 h-5 text-on-surface fill-current transition-transform group-hover:scale-105" viewBox="0 0 24 24">
+<path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.77 1.05-1.83.93-2.88-.91.04-2 .61-2.65 1.37-.58.67-1.09 1.76-.95 2.79 1.02.08 2.05-.51 2.67-1.28z"></path>
+</svg>
+</button>
+</div>
+</section>
+<!-- Footer: Registration & Navigation Gesture -->
+<footer class="w-full pb-4 pt-2 px-margin flex flex-col items-center">
+<div class="text-center mb-4">
+<p class="font-body-md text-body-md text-outline">
+          Don't have an account? 
+          <a class="font-label-lg text-label-lg text-primary hover:text-primary-container font-semibold transition-colors ml-1 focus:outline-none focus:underline" href="#">
+            Sign Up
+          </a>
+</p>
+</div>
+<!-- Native iOS Home Indicator Bar -->
+<div class="w-32 h-1 bg-on-surface/20 rounded-full mt-2"></div>
+</footer>
+</main>
+<!-- Interactive script for Password Toggle -->
+<script>
+    const toggleBtn = document.getElementById('togglePassword');
+    const pwdInput = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    if (toggleBtn && pwdInput && eyeIcon) {
+      toggleBtn.addEventListener('click', () => {
+        const isPassword = pwdInput.getAttribute('type') === 'password';
+        pwdInput.setAttribute('type', isPassword ? 'text' : 'password');
+        eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        eyeIcon.setAttribute('data-icon', isPassword ? 'visibility_off' : 'visibility');
+      });
+    }
+  </script>
+</body></html>

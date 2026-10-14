@@ -1,0 +1,291 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Student Life Observation - Profile Screen</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#4361ee',
+              600: '#3a57e8',
+              700: '#2b44cc',
+            },
+            surface: '#f8fafc',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 8px 24px -4px rgba(58, 87, 232, 0.08)',
+            'nav': '0 -4px 20px -2px rgba(0, 0, 0, 0.05)',
+            'btn-glow': '0 8px 20px -4px rgba(58, 87, 232, 0.45)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-scrollbars">
+    /* Hide scrollbars for a clean mobile frame aesthetic */
+    body::-webkit-scrollbar,
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    body, .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#f0f3fb] text-slate-800 font-sans antialiased min-h-screen flex items-center justify-center p-0 sm:p-4">
+<!-- BEGIN: MobileDeviceFrame -->
+<div class="w-full max-w-[393px] h-[852px] bg-[#fbfbfe] sm:rounded-[44px] shadow-2xl relative overflow-hidden flex flex-col border border-slate-200/80" data-purpose="mobile-device-viewport">
+<!-- BEGIN: iOSStatusBar -->
+<header class="w-full pt-3 px-7 pb-2 flex justify-between items-center z-30 select-none bg-transparent" data-purpose="status-bar">
+<!-- Time Display -->
+<span class="text-[14px] font-semibold tracking-tight text-slate-900">9:41</span>
+<!-- Dynamic Island / Speaker notch simulation -->
+<div class="w-24 h-4 bg-slate-900 rounded-full hidden sm:block"></div>
+<!-- Network, Wifi and Battery Status Icons -->
+<div class="flex items-center space-x-1.5 text-slate-900">
+<!-- Cellular Signal -->
+<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+<path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 18.25C2.89 16.51 2 14.36 2 12 2 6.48 6.48 2 12 2s10 4.48 10 10c0 2.36-.89 4.51-2.35 6.25l-.62-.64C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9zm0 4c-2.76 0-5 2.24-5 5 0 1.25.46 2.39 1.21 3.29l.71-.71C8.36 13.94 8 13.02 8 12c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.02-.36 1.94-.92 2.58l.71.71c.75-.9 1.21-2.04 1.21-3.29 0-2.76-2.24-5-5-5zm0 8a1 1 0 100 2 1 1 0 000-2z"></path>
+</svg>
+<!-- Wi-Fi -->
+<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+<path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A17.95 17.95 0 0012 4zm0 3.25c3.78 0 7.21 1.48 9.77 3.93L12 19.04 2.23 11.18C4.79 8.73 8.22 7.25 12 7.25z"></path>
+</svg>
+<!-- Battery Level Icon -->
+<div class="flex items-center">
+<div class="w-5 h-2.5 border border-slate-900 rounded-sm p-[1px] flex items-center">
+<div class="w-full h-full bg-slate-900 rounded-2xs"></div>
+</div>
+<div class="w-0.5 h-1 bg-slate-900 rounded-r-xs ml-0.5"></div>
+</div>
+</div>
+</header>
+<!-- END: iOSStatusBar -->
+<!-- BEGIN: TopBar -->
+<div class="px-6 py-2 flex items-center justify-between" data-purpose="screen-header">
+<div class="w-9 h-9"></div> <!-- Empty spacer for balance -->
+<h1 class="text-base font-bold text-slate-900 tracking-tight">Profile</h1>
+<!-- Quick Settings / Options Button -->
+<button aria-label="Settings" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors" type="button">
+<svg class="w-5 h-5 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+</svg>
+</button>
+</div>
+<!-- END: TopBar -->
+<!-- BEGIN: MainContentScrollableArea -->
+<main class="flex-1 overflow-y-auto no-scrollbar px-6 pt-1 pb-24 space-y-5" data-purpose="profile-scroll-area">
+<!-- BEGIN: UserIdentityCard -->
+<section class="flex flex-col items-center text-center pt-2" data-purpose="user-identity">
+<!-- Avatar Wrapper with subtle decorative ring -->
+<div class="relative group">
+<div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-brand-600 via-indigo-400 to-brand-100 shadow-md">
+<img alt="Mehedi Hasan profile photo" class="w-full h-full rounded-full object-cover border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd1-ErwkIZnJKwhnF70Vj27GfbxladsmylKzvTPDs0sCuPhigMmcGIz-g_X90gAYmQNu6zS3Wilm0rbTMO5sfO0cDuxFaHQF2Aed5Ly1HdAUCGudCwlr8R4luGc_RptLeIFrBSmSiSls27y9MGn3zGhS1QXPO0vW3JZQ9MmJQbSubb7_NdW3DLanvohKfBV1ldjzf7SYrTUtGVqZjNgShn7cxu-iiEKqGbd043AfU">
+</div>
+<!-- Online / Active Badge -->
+<div class="absolute bottom-1 right-2 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full"></div>
+</div>
+<!-- Name & Email Display -->
+<h2 class="text-xl font-bold text-slate-900 mt-3 tracking-tight">Mehedi Hasan</h2>
+<p class="text-xs font-medium text-slate-400 tracking-normal mt-0.5">mehedihasan@gmail.com</p>
+</section>
+<!-- END: UserIdentityCard -->
+<!-- BEGIN: MetricsOverviewRow -->
+<!-- 3 Key Metric Summary Cards from Wireframe Screen 12 -->
+<section class="grid grid-cols-3 gap-3 pt-1" data-purpose="metrics-summary">
+<!-- Metric 1: Days Completed -->
+<div class="bg-white border border-slate-100/80 rounded-2xl p-3 flex flex-col items-center justify-center text-center shadow-soft">
+<span class="text-xl font-extrabold text-brand-600 leading-tight">30</span>
+<span class="text-[10.5px] font-medium text-slate-400 mt-1 uppercase tracking-tight">Days Completed</span>
+</div>
+<!-- Metric 2: Avg Score -->
+<div class="bg-white border border-slate-100/80 rounded-2xl p-3 flex flex-col items-center justify-center text-center shadow-soft">
+<span class="text-xl font-extrabold text-slate-900 leading-tight">72%</span>
+<span class="text-[10.5px] font-medium text-slate-400 mt-1 uppercase tracking-tight">Avg Score</span>
+</div>
+<!-- Metric 3: Best Streak -->
+<div class="bg-white border border-slate-100/80 rounded-2xl p-3 flex flex-col items-center justify-center text-center shadow-soft">
+<span class="text-xl font-extrabold text-amber-500 leading-tight">6</span>
+<span class="text-[10.5px] font-medium text-slate-400 mt-1 uppercase tracking-tight">Best Streak</span>
+</div>
+</section>
+<!-- END: MetricsOverviewRow -->
+<!-- BEGIN: AccountMenuSection -->
+<nav class="bg-white rounded-2xl border border-slate-100 shadow-soft overflow-hidden divide-y divide-slate-50" data-purpose="account-options-list">
+<!-- Menu Item: Edit Profile -->
+<a class="flex items-center justify-between p-3.5 hover:bg-slate-50/80 transition-colors group" href="#edit-profile">
+<div class="flex items-center space-x-3.5">
+<div class="w-8 h-8 rounded-xl bg-blue-50 text-brand-600 flex items-center justify-center">
+<svg class="w-4 h-4 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+<circle cx="12" cy="7" r="4"></circle>
+</svg>
+</div>
+<span class="text-sm font-semibold text-slate-700 group-hover:text-slate-900">Edit Profile</span>
+</div>
+<svg class="w-4 h-4 text-slate-300 group-hover:text-slate-500 transition-colors stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7"></path>
+</svg>
+</a>
+<!-- Menu Item: My Goals -->
+<a class="flex items-center justify-between p-3.5 hover:bg-slate-50/80 transition-colors group" href="#my-goals">
+<div class="flex items-center space-x-3.5">
+<div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+<svg class="w-4 h-4 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<circle cx="12" cy="12" r="6"></circle>
+<circle cx="12" cy="12" r="2"></circle>
+</svg>
+</div>
+<span class="text-sm font-semibold text-slate-700 group-hover:text-slate-900">My Goals</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="text-[11px] font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">4 Active</span>
+<svg class="w-4 h-4 text-slate-300 group-hover:text-slate-500 transition-colors stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7"></path>
+</svg>
+</div>
+</a>
+<!-- Menu Item: Reminders -->
+<a class="flex items-center justify-between p-3.5 hover:bg-slate-50/80 transition-colors group" href="#reminders">
+<div class="flex items-center space-x-3.5">
+<div class="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+<svg class="w-4 h-4 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+<path d="M13.73 21a2 2 0 01-3.46 0"></path>
+</svg>
+</div>
+<span class="text-sm font-semibold text-slate-700 group-hover:text-slate-900">Reminders</span>
+</div>
+<svg class="w-4 h-4 text-slate-300 group-hover:text-slate-500 transition-colors stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7"></path>
+</svg>
+</a>
+<!-- Menu Item: Settings -->
+<a class="flex items-center justify-between p-3.5 hover:bg-slate-50/80 transition-colors group" href="#settings">
+<div class="flex items-center space-x-3.5">
+<div class="w-8 h-8 rounded-xl bg-slate-100 text-slate-600 flex items-center justify-center">
+<svg class="w-4 h-4 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="3"></circle>
+<path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"></path>
+</svg>
+</div>
+<span class="text-sm font-semibold text-slate-700 group-hover:text-slate-900">Settings</span>
+</div>
+<svg class="w-4 h-4 text-slate-300 group-hover:text-slate-500 transition-colors stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7"></path>
+</svg>
+</a>
+<!-- Menu Item: Help & Support -->
+<a class="flex items-center justify-between p-3.5 hover:bg-slate-50/80 transition-colors group" href="#help">
+<div class="flex items-center space-x-3.5">
+<div class="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+<svg class="w-4 h-4 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"></path>
+<line x1="12" x2="12.01" y1="17" y2="17"></line>
+</svg>
+</div>
+<span class="text-sm font-semibold text-slate-700 group-hover:text-slate-900">Help &amp; Support</span>
+</div>
+<svg class="w-4 h-4 text-slate-300 group-hover:text-slate-500 transition-colors stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7"></path>
+</svg>
+</a>
+<!-- Menu Item: Logout (Danger Action) -->
+<button class="w-full flex items-center justify-between p-3.5 hover:bg-rose-50/50 transition-colors group text-left" type="button">
+<div class="flex items-center space-x-3.5">
+<div class="w-8 h-8 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center">
+<svg class="w-4 h-4 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"></path>
+<polyline points="16 17 21 12 16 7"></polyline>
+<line x1="21" x2="9" y1="12" y2="12"></line>
+</svg>
+</div>
+<span class="text-sm font-semibold text-rose-600 group-hover:text-rose-700">Logout</span>
+</div>
+<svg class="w-4 h-4 text-rose-300 group-hover:text-rose-400 transition-colors stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7"></path>
+</svg>
+</button>
+</nav>
+<!-- END: AccountMenuSection -->
+<!-- App Version & Copyright Subtitle -->
+<footer class="text-center pt-1 pb-4">
+<p class="text-[11px] font-medium text-slate-400">Student Life Observation v1.0.4</p>
+<p class="text-[10px] text-slate-300 mt-0.5">30-Day Growth &amp; Habit Tracker</p>
+</footer>
+</main>
+<!-- END: MainContentScrollableArea -->
+<!-- BEGIN: BottomNavigationBar -->
+<!-- Tab bar identical to wireframe with 5 items and centered action button -->
+<nav class="absolute bottom-0 left-0 right-0 h-[74px] bg-white border-t border-slate-100 flex items-center justify-around px-3 z-40 shadow-nav" data-purpose="bottom-navigation-bar">
+<!-- Tab: Home -->
+<a class="flex flex-col items-center justify-center w-14 py-1 text-slate-400 hover:text-slate-600 transition-colors" href="#home">
+<svg class="w-5 h-5 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+<span class="text-[10px] font-medium mt-1">Home</span>
+</a>
+<!-- Tab: Calendar -->
+<a class="flex flex-col items-center justify-center w-14 py-1 text-slate-400 hover:text-slate-600 transition-colors" href="#calendar">
+<svg class="w-5 h-5 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+<line x1="16" x2="16" y1="2" y2="6"></line>
+<line x1="8" x2="8" y1="2" y2="6"></line>
+<line x1="3" x2="21" y1="10" y2="10"></line>
+</svg>
+<span class="text-[10px] font-medium mt-1">Calendar</span>
+</a>
+<!-- Center Floating Button: Add Task [+] -->
+<div class="relative -top-3">
+<button aria-label="Add Task" class="w-12 h-12 rounded-full bg-brand-600 text-white flex items-center justify-center shadow-btn-glow hover:bg-brand-700 active:scale-95 transition-all" type="button">
+<svg class="w-6 h-6 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24">
+<line x1="12" x2="12" y1="5" y2="19"></line>
+<line x1="5" x2="19" y1="12" y2="12"></line>
+</svg>
+</button>
+</div>
+<!-- Tab: Progress -->
+<a class="flex flex-col items-center justify-center w-14 py-1 text-slate-400 hover:text-slate-600 transition-colors" href="#progress">
+<svg class="w-5 h-5 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24">
+<line x1="18" x2="18" y1="20" y2="10"></line>
+<line x1="12" x2="12" y1="20" y2="4"></line>
+<line x1="6" x2="6" y1="20" y2="14"></line>
+</svg>
+<span class="text-[10px] font-medium mt-1">Progress</span>
+</a>
+<!-- Tab: Profile (ACTIVE) -->
+<a class="flex flex-col items-center justify-center w-14 py-1 text-brand-600 font-semibold relative" href="#profile">
+<svg class="w-5 h-5 stroke-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+<circle cx="12" cy="7" r="4"></circle>
+</svg>
+<span class="text-[10px] mt-1 font-bold">Profile</span>
+<!-- Active indicator dot below active tab -->
+<span class="w-1.5 h-1.5 bg-brand-600 rounded-full mt-0.5"></span>
+</a>
+</nav>
+<!-- END: BottomNavigationBar -->
+<!-- iOS Home Indicator bar -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-900/40 rounded-full pointer-events-none z-50"></div>
+</div>
+<!-- END: MobileDeviceFrame -->
+</body></html>

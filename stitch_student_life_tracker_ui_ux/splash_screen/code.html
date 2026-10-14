@@ -1,0 +1,253 @@
+<!DOCTYPE html><html class="h-full" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Student Life Observation - Splash Screen</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-container": "#e3e5ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#6ffbbe",
+            "on-secondary-fixed": "#002113",
+            "inverse-surface": "#283044",
+            "primary": "#173bd0",
+            "surface": "#faf8ff",
+            "secondary-fixed-dim": "#4edea3",
+            "on-secondary-container": "#00714d",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#2a1700",
+            "on-tertiary-fixed-variant": "#653e00",
+            "error-container": "#ffdad6",
+            "surface-container": "#eaedff",
+            "primary-fixed-dim": "#bac3ff",
+            "tertiary-fixed-dim": "#ffb95f",
+            "secondary": "#006c49",
+            "surface-bright": "#faf8ff",
+            "tertiary": "#704600",
+            "on-primary-fixed": "#00105b",
+            "primary-fixed": "#dee0ff",
+            "surface-container-low": "#f2f3ff",
+            "surface-dim": "#d2d9f4",
+            "on-secondary-fixed-variant": "#005236",
+            "on-error": "#ffffff",
+            "surface-container-high": "#e2e7ff",
+            "primary-container": "#3a57e8",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#eef0ff",
+            "tertiary-fixed": "#ffddb8",
+            "background": "#faf8ff",
+            "on-background": "#131b2e",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#444655",
+            "on-tertiary-container": "#ffe1c2",
+            "on-surface": "#131b2e",
+            "tertiary-container": "#915b00",
+            "surface-variant": "#dae2fd",
+            "surface-container-highest": "#dae2fd",
+            "inverse-primary": "#bac3ff",
+            "outline": "#757686",
+            "surface-tint": "#2f4ddf",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "secondary-container": "#6cf8bb",
+            "on-primary-fixed-variant": "#0130c8",
+            "outline-variant": "#c5c5d8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "1.25rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "label-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "label-sm": ["10px", { "lineHeight": "12px", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    @keyframes pulseDot {
+      0%, 80%, 100% {
+        transform: scale(0.75);
+        opacity: 0.35;
+      }
+      40% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
+    .dot-1 { animation: pulseDot 1.4s infinite ease-in-out; }
+    .dot-2 { animation: pulseDot 1.4s infinite ease-in-out 0.2s; }
+    .dot-3 { animation: pulseDot 1.4s infinite ease-in-out 0.4s; }
+  </style>
+</head>
+<body class="bg-surface-container-high min-h-screen flex items-center justify-center p-0 md:p-6 text-on-surface antialiased font-body-md select-none">
+<!-- Mobile Viewport Canvas Container matching 1. Splash Screen -->
+<div class="relative w-full max-w-[400px] h-[844px] bg-gradient-to-b from-surface via-surface-bright to-surface-container-low rounded-[44px] shadow-2xl overflow-hidden flex flex-col justify-between border-[6px] border-surface-container-lowest">
+<!-- Top Decorative Ambient Glow -->
+<div class="absolute -top-24 -left-20 w-72 h-72 bg-primary-fixed/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/3 -right-24 w-60 h-60 bg-surface-variant/50 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Status Bar (iOS standard 9:41 layout) -->
+<header class="relative z-10 w-full pt-3 px-7 flex justify-between items-center text-on-surface">
+<div class="font-headline-sm text-headline-sm font-bold tracking-tight">9:41</div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[17px] leading-none">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px] leading-none">wifi</span>
+<span class="material-symbols-outlined text-[20px] leading-none">battery_full</span>
+</div>
+</header>
+<!-- Main Branding & Identity Hero (Screen 1 Core) -->
+<main class="relative z-10 flex flex-col items-center justify-center px-6 mt-6">
+<!-- Logo Target / Eye / Observation Geometric Glyph -->
+<div class="relative mb-5 flex items-center justify-center">
+<!-- Ambient subtle glow behind logo -->
+<div class="absolute inset-0 bg-primary-container/20 rounded-full blur-xl scale-125"></div>
+<div class="relative w-24 h-24 rounded-full bg-surface-container-lowest shadow-[0_10px_25px_-4px_rgba(58,87,232,0.22)] flex items-center justify-center p-3 border border-surface-container">
+<!-- Concentric Observation Rings SVG -->
+<svg class="w-full h-full" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<!-- Outer Ring -->
+<circle cx="50" cy="50" r="42" stroke="#3A57E8" stroke-dasharray="190 25" stroke-linecap="round" stroke-width="6"></circle>
+<!-- Middle Tinted Ring -->
+<circle cx="50" cy="50" r="30" stroke="#BAC3FF" stroke-width="4.5"></circle>
+<!-- Inner Solid Iris Target -->
+<circle cx="50" cy="50" fill="#173BD0" r="18"></circle>
+<!-- Centered Pupil Focus -->
+<circle cx="50" cy="50" fill="#FAF8FF" r="8"></circle>
+<circle cx="47" cy="47" fill="#3A57E8" r="2.5"></circle>
+</svg>
+</div>
+</div>
+<!-- App Title -->
+<h1 class="font-headline-xl text-[26px] leading-[32px] font-bold text-on-surface text-center tracking-tight">
+        Student Life<br>
+<span class="text-primary-container">Observation</span>
+</h1>
+<!-- Slogan -->
+<p class="mt-2 font-label-md text-label-md text-outline font-medium tracking-wide text-center">
+        Observe Today. Improve Tomorrow.
+      </p>
+<!-- Student Illustration Graphic (Wireframe 1) -->
+<div class="mt-7 w-full max-w-[290px] relative flex flex-col items-center">
+<!-- Floating Study Accents -->
+<div class="absolute -top-3 left-4 w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary shadow-sm rotate-[-10deg]">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</div>
+<div class="absolute top-2 right-4 w-7 h-7 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary shadow-sm rotate-[12deg]">
+<span class="material-symbols-outlined text-[15px]">timer</span>
+</div>
+<div class="absolute -bottom-1 left-2 w-6 h-6 rounded-full bg-tertiary-fixed/60 flex items-center justify-center text-tertiary rotate-[6deg]">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+</div>
+<!-- Custom Stylized Flat Student Vector Graphic matching reference -->
+<div class="w-full h-52 relative flex items-end justify-center">
+<svg class="w-full h-full drop-shadow-md" fill="none" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+<!-- Background Soft Ambient Blob & Ground -->
+<ellipse cx="160" cy="195" fill="#E2E7FF" opacity="0.8" rx="130" ry="14"></ellipse>
+<!-- Left Side: Backpack & Books Stack -->
+<path d="M68 145 C64 125, 80 115, 92 118 C102 120, 108 132, 106 155 L102 190 C102 195, 66 195, 68 145 Z" fill="#3A57E8"></path>
+<path d="M72 135 C72 125, 85 125, 86 135 L86 175 L72 175 Z" fill="#173BD0"></path>
+<rect fill="#BAC3FF" height="26" rx="4" width="22" x="74" y="150"></rect>
+<!-- Pocket zipper -->
+<path d="M77 155 H93" stroke="#FAF8FF" stroke-linecap="round" stroke-width="2"></path>
+<!-- Stacked Books on floor -->
+<rect fill="#4EDEA3" height="6" rx="2" width="34" x="52" y="186"></rect>
+<rect fill="#FFB95F" height="6" rx="2" width="28" x="55" y="180"></rect>
+<!-- Right Side: Small Potted Desk Plant -->
+<path d="M250 174 L258 194 H242 L250 174 Z" fill="#BAC3FF"></path>
+<!-- Stem and Foliage -->
+<path d="M250 174 Q240 155 235 152 Q245 156 250 174 Z" fill="#006C49"></path>
+<path d="M250 174 Q260 150 268 148 Q258 158 250 174 Z" fill="#4EDEA3"></path>
+<path d="M250 170 Q250 145 248 140 Q254 150 250 170 Z" fill="#00714D"></path>
+<!-- Main Character: Student sitting cross-legged -->
+<!-- Torso & Indigo Hoodie -->
+<path d="M140 102 C130 102, 122 116, 120 134 L116 175 C116 182, 178 182, 178 175 L174 134 C172 116, 164 102, 154 102 Z" fill="#3A57E8"></path>
+<!-- Hoodie collar -->
+<path d="M138 104 Q147 114 156 104" stroke="#FAF8FF" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Head & Hair -->
+<ellipse cx="147" cy="80" fill="#FFDDB8" rx="14" ry="17"></ellipse>
+<!-- Dark Hair styled -->
+<path d="M133 76 C133 63, 145 58, 158 62 C162 64, 164 70, 163 76 C158 74, 152 74, 147 77 C142 80, 137 79, 133 76 Z" fill="#131B2E"></path>
+<!-- Student Arms typing forward -->
+<path d="M124 130 Q138 148 152 148" stroke="#3A57E8" stroke-linecap="round" stroke-width="9"></path>
+<path d="M170 130 Q158 148 148 148" stroke="#3A57E8" stroke-linecap="round" stroke-width="9"></path>
+<!-- Hands -->
+<circle cx="150" cy="149" fill="#FFDDB8" r="4.5"></circle>
+<!-- Student Laptop on Lap -->
+<path d="M134 148 L170 148 L166 168 L138 168 Z" fill="#283044"></path>
+<rect fill="#EAEDFF" height="17" rx="1.5" width="32" x="136" y="149"></rect>
+<!-- Glowing screen content logo -->
+<circle cx="152" cy="157" fill="#3A57E8" r="3.5"></circle>
+<path d="M130 168 H174 L170 171 H134 Z" fill="#C5C5D8"></path>
+<!-- Cross-legged Pants (Slate Navy) -->
+<path d="M116 172 C104 174, 98 184, 108 192 C120 200, 150 196, 160 192" stroke="#131B2E" stroke-linecap="round" stroke-width="12"></path>
+<path d="M178 172 C190 174, 196 184, 186 192 C174 200, 144 196, 134 192" stroke="#131B2E" stroke-linecap="round" stroke-width="12"></path>
+<!-- White Sneakers -->
+<ellipse cx="106" cy="192" fill="#FAF8FF" rx="7" ry="5"></ellipse>
+<ellipse cx="188" cy="192" fill="#FAF8FF" rx="7" ry="5"></ellipse>
+</svg>
+</div>
+</div>
+</main>
+<!-- Bottom Indicator Area (Screen 1 Splash loader dots & iOS home bar) -->
+<footer class="relative z-10 w-full pb-6 flex flex-col items-center">
+<!-- 3-Dot Animated Pulse Loading Indicator -->
+<div class="flex items-center space-x-2 py-4">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container dot-1"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary dot-2"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim dot-3"></span>
+</div>
+<!-- iOS Home Grab Indicator Bar -->
+<div class="mt-2 w-32 h-1 bg-outline-variant/60 rounded-full"></div>
+</footer>
+</div>
+</body></html>

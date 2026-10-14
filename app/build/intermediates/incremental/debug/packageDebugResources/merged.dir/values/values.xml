@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="accent">#3A57E8</color>
+    <color name="background">#FAF8FF</color>
+    <color name="background_dark">#131B2E</color>
+    <color name="background_light">#F8FAFC</color>
+    <color name="background_surface">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="border">#E2E8F0</color>
+    <color name="border_subtle">#F1F5F9</color>
+    <color name="border_variant">#C5C5D8</color>
+    <color name="cat_activity">#10B981</color>
+    <color name="cat_activity_bg">#ECFDF5</color>
+    <color name="cat_health">#10B981</color>
+    <color name="cat_health_bg">#ECFDF5</color>
+    <color name="cat_learning">#0284C7</color>
+    <color name="cat_learning_bg">#F0F9FF</color>
+    <color name="cat_other">#64748B</color>
+    <color name="cat_other_bg">#F1F5F9</color>
+    <color name="cat_social">#F59E0B</color>
+    <color name="cat_social_bg">#FFF7ED</color>
+    <color name="cat_spiritual">#8B5CF6</color>
+    <color name="cat_spiritual_bg">#F5F3FF</color>
+    <color name="cat_study">#3A57E8</color>
+    <color name="cat_study_bg">#EEF2FF</color>
+    <color name="cat_work">#7C3AED</color>
+    <color name="cat_work_bg">#F5F3FF</color>
+    <color name="divider">#EAEDFF</color>
+    <color name="error">#BA1A1A</color>
+    <color name="error_container">#FFDAD6</color>
+    <color name="fab_gradient_end">#4F46E5</color>
+    <color name="fab_gradient_start">#3A57E8</color>
+    <color name="info">#3A57E8</color>
+    <color name="info_light">#EEF2FF</color>
+    <color name="nav_background">#FFFFFF</color>
+    <color name="nav_selected">#3A57E8</color>
+    <color name="nav_unselected">#94A3B8</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_primary_container">#E3E5FF</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="on_secondary_container">#00714D</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="on_tertiary_container">#FFE1C2</color>
+    <color name="outline">#757686</color>
+    <color name="outline_variant">#C5C5D8</color>
+    <color name="overlay">#66000000</color>
+    <color name="primary">#3A57E8</color>
+    <color name="primary_container">#3A57E8</color>
+    <color name="primary_dark">#173BD0</color>
+    <color name="primary_gradient_end">#4F46E5</color>
+    <color name="primary_light">#BAC3FF</color>
+    <color name="primary_tint">#EEF2FF</color>
+    <color name="ripple">#1A3A57E8</color>
+    <color name="secondary">#10B981</color>
+    <color name="secondary_container">#6CF8BB</color>
+    <color name="secondary_dark">#006C49</color>
+    <color name="secondary_light">#6CF8BB</color>
+    <color name="secondary_tint">#ECFDF5</color>
+    <color name="success">#10B981</color>
+    <color name="success_light">#ECFDF5</color>
+    <color name="surface">#FAF8FF</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_container">#EAEDFF</color>
+    <color name="surface_container_high">#E2E7FF</color>
+    <color name="surface_container_highest">#DAE2FD</color>
+    <color name="surface_container_low">#F2F3FF</color>
+    <color name="surface_container_lowest">#FFFFFF</color>
+    <color name="surface_dim">#D2D9F4</color>
+    <color name="surface_elevated">#FFFFFF</color>
+    <color name="surface_variant">#DAE2FD</color>
+    <color name="tertiary">#F59E0B</color>
+    <color name="tertiary_container">#915B00</color>
+    <color name="tertiary_dark">#704600</color>
+    <color name="tertiary_light">#FFDDB8</color>
+    <color name="tertiary_tint">#FFF7ED</color>
+    <color name="text_accent">#3A57E8</color>
+    <color name="text_hint">#94A3B8</color>
+    <color name="text_muted">#757686</color>
+    <color name="text_on_surface">#131B2E</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_variant">#444655</color>
+    <color name="transparent">#00000000</color>
+    <color name="warning">#F59E0B</color>
+    <color name="warning_light">#FFF7ED</color>
+    <color name="white">#FFFFFF</color>
+    <dimen name="avatar_size">44dp</dimen>
+    <dimen name="avatar_size_lg">96dp</dimen>
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="btn_height">52dp</dimen>
+    <dimen name="btn_height_sm">40dp</dimen>
+    <dimen name="button_radius">999dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_radius_lg">24dp</dimen>
+    <dimen name="checkbox_size">22dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="icon_lg">28dp</dimen>
+    <dimen name="icon_md">22dp</dimen>
+    <dimen name="icon_sm">18dp</dimen>
+    <dimen name="input_height">52dp</dimen>
+    <dimen name="input_radius">16dp</dimen>
+    <dimen name="progress_ring_size">80dp</dimen>
+    <dimen name="progress_ring_stroke">8dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_xl">24dp</dimen>
+    <dimen name="radius_xs">4dp</dimen>
+    <dimen name="screen_gutter">16dp</dimen>
+    <dimen name="screen_margin">20dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+    <dimen name="spacing_xxs">2dp</dimen>
+    <dimen name="text_body_lg">16sp</dimen>
+    <dimen name="text_body_md">14sp</dimen>
+    <dimen name="text_body_sm">12sp</dimen>
+    <dimen name="text_display">32sp</dimen>
+    <dimen name="text_headline_lg">24sp</dimen>
+    <dimen name="text_headline_md">20sp</dimen>
+    <dimen name="text_headline_sm">18sp</dimen>
+    <dimen name="text_headline_xl">32sp</dimen>
+    <dimen name="text_label_lg">14sp</dimen>
+    <dimen name="text_label_md">12sp</dimen>
+    <dimen name="text_label_sm">10sp</dimen>
+    <dimen name="text_lg">16sp</dimen>
+    <dimen name="text_md">14sp</dimen>
+    <dimen name="text_score">56sp</dimen>
+    <dimen name="text_sm">12sp</dimen>
+    <dimen name="text_xl">18sp</dimen>
+    <dimen name="text_xs">10sp</dimen>
+    <dimen name="text_xxl">24sp</dimen>
+    <dimen name="top_bar_height">56dp</dimen>
+    <string name="active_day">Active Day</string>
+    <string name="add_custom_task">Add Custom Task</string>
+    <string name="all_tasks">All (%1$d)</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="app_footer_subtitle">30-Day Growth &amp; Habit Tracker</string>
+    <string name="app_name">Student Life Observation</string>
+    <string name="app_slogan">Observe Today. Improve Tomorrow.</string>
+    <string name="app_version_label">Student Life Observation v1.0.4</string>
+    <string name="avg_score">Avg Score</string>
+    <string name="best_day">Best Day</string>
+    <string name="best_streak">Best Streak</string>
+    <string name="calendar_view">Calendar View</string>
+    <string name="cat_all">All</string>
+    <string name="category">Category</string>
+    <string name="category_activity">Activity</string>
+    <string name="category_career">Career</string>
+    <string name="category_health">Health</string>
+    <string name="category_learning">Learning</string>
+    <string name="category_other">Other</string>
+    <string name="category_social">Social</string>
+    <string name="category_spiritual">Spiritual</string>
+    <string name="category_study">Study</string>
+    <string name="category_work">Work</string>
+    <string name="cd_app_logo">Student Life logo</string>
+    <string name="cd_back_button">Go back</string>
+    <string name="cd_profile_image">Profile picture</string>
+    <string name="completed">Completed</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="current_level_of">Current level %1$d of 10</string>
+    <string name="day_progress">Day %1$d / 30</string>
+    <string name="day_summary">Day Summary</string>
+    <string name="days_completed">Days Completed</string>
+    <string name="department">Department</string>
+    <string name="dimensions_evaluation">Dimensions Evaluation</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="download_summary_pdf">Download Summary (PDF)</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="email_address">Email</string>
+    <string name="enter_email_reset">Enter your email to receive a password reset link.</string>
+    <string name="enter_task_title">Enter task title</string>
+    <string name="error_empty_email">Please enter your email address.</string>
+    <string name="error_empty_name">Please enter your full name.</string>
+    <string name="error_empty_password">Please enter a password.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_invalid_email">Please enter a valid email address.</string>
+    <string name="error_password_too_short">Password must be at least 6 characters.</string>
+    <string name="error_passwords_mismatch">Passwords do not match.</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="full_name">Full Name</string>
+    <string name="gcm_defaultSenderId" translatable="false">55678118471</string>
+    <string name="get_started">Get Started</string>
+    <string name="good_morning">Good Morning,</string>
+    <string name="google_api_key" translatable="false">AIzaSyCo-9dhhS8nr_bAgGpNYt_ek7vIhLtGqXc</string>
+    <string name="google_app_id" translatable="false">1:55678118471:android:9eb04cae4ef2b874f19f62</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCo-9dhhS8nr_bAgGpNYt_ek7vIhLtGqXc</string>
+    <string name="google_storage_bucket" translatable="false">student-life-observation-app.firebasestorage.app</string>
+    <string name="great_job">Great Job! 🎉</string>
+    <string name="great_progress">Great Progress!</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="keep_going">Keep going! You\'re doing great.</string>
+    <string name="life_stage_10_levels">Life Stage (10 Levels)</string>
+    <string name="login">Login</string>
+    <string name="login_continue">Login to continue your journey</string>
+    <string name="logout">Logout</string>
+    <string name="monthly">Monthly</string>
+    <string name="monthly_progress">Monthly Progress</string>
+    <string name="my_goals">My Goals</string>
+    <string name="nav_add">Add</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_insights">Insights</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_today">Today</string>
+    <string name="next_up">Next Up</string>
+    <string name="observation_progress">Observation Progress</string>
+    <string name="onboarding_subtitle">Track your daily activities, build good habits and become a better version of yourself.</string>
+    <string name="onboarding_title">Understand Yourself, Improve Your Life</string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="overview">Overview</string>
+    <string name="password">Password</string>
+    <string name="profile">Profile</string>
+    <string name="progress_analytics">Progress Analytics</string>
+    <string name="project_id" translatable="false">student-life-observation-app</string>
+    <string name="register">Register</string>
+    <string name="remind_me">Remind Me</string>
+    <string name="reminders">Reminders</string>
+    <string name="report_congrats">You have completed 30 days of self observation. Here is your personalized analysis based on your performance.</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="right_track">You are on the right track! 🚀</string>
+    <string name="save">Save</string>
+    <string name="save_task">Save Task</string>
+    <string name="score">Score</string>
+    <string name="select_category">Select Category</string>
+    <string name="send_reset_link">Send Reset Link</string>
+    <string name="settings">Settings</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="stage_number">Stage %1$d</string>
+    <string name="stage_prediction_30_day">30-Day Stage Prediction</string>
+    <string name="start_transformation">Start your 30-day transformation</string>
+    <string name="streak">Streak</string>
+    <string name="task_title">Task Title</string>
+    <string name="tasks_completed">Tasks Completed</string>
+    <string name="tasks_completed_count">%1$d of %2$d Completed</string>
+    <string name="tasks_today">Tasks Today</string>
+    <string name="this_month_summary">This Month Summary</string>
+    <string name="today_progress">Today\'s Progress</string>
+    <string name="todays_tasks">Today\'s Tasks</string>
+    <string name="top_categories">Top Categories</string>
+    <string name="total_days">Total Days</string>
+    <string name="university">University</string>
+    <string name="view_all">View All</string>
+    <string name="view_detailed_prediction">View Detailed Prediction</string>
+    <string name="view_details">View Details</string>
+    <string name="view_full_report">View Full Report</string>
+    <string name="weekly">Weekly</string>
+    <string name="welcome_back">Welcome Back! 👋</string>
+    <string name="yearly">Yearly</string>
+    <string name="your_30_day_life_report">Your 30-Day Life Report</string>
+    <string name="your_life_stage">Your Life Stage</string>
+    <style name="TextAppearance.App.Body" parent="TextAppearance.App.BodyMd"/>
+    <style name="TextAppearance.App.BodyLg" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.App.BodyMd" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextAppearance.App.BodySm" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="TextAppearance.App.Caption" parent="TextAppearance.App.BodySm"/>
+    <style name="TextAppearance.App.Display" parent="TextAppearance.App.HeadlineXl"/>
+    <style name="TextAppearance.App.Headline" parent="TextAppearance.App.HeadlineLg"/>
+    <style name="TextAppearance.App.HeadlineLg" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.App.HeadlineMd" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.App.HeadlineSm" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.App.HeadlineXl" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.App.LabelLg" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.App.LabelMd" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.App.LabelSm" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.App.Score" parent="TextAppearance.App.HeadlineXl">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">44sp</item>
+    </style>
+    <style name="TextAppearance.App.Subtitle" parent="TextAppearance.App.BodyMd"/>
+    <style name="TextAppearance.App.Title" parent="TextAppearance.App.HeadlineSm"/>
+    <style name="Theme.StudentLifeTracker" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/secondary</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="23">true</item>
+        <item name="android:windowLightNavigationBar" ns1:targetApi="27">true</item>
+    </style>
+    <style name="Theme.StudentLifeTracker.Auth" parent="Theme.StudentLifeTracker">
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="23">true</item>
+    </style>
+    <style name="Theme.StudentLifeTracker.Splash" parent="Theme.StudentLifeTracker">
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar" ns1:targetApi="23">true</item>
+    </style>
+    <style name="Widget.App.BottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/white</item>
+        <item name="itemIconTint">@drawable/bottom_nav_color_selector</item>
+        <item name="itemTextColor">@drawable/bottom_nav_color_selector</item>
+        <item name="elevation">8dp</item>
+    </style>
+    <style name="Widget.App.Button.Accent" parent="Widget.App.Button.Primary"/>
+    <style name="Widget.App.Button.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/primary</item>
+        <item name="strokeColor">@color/primary</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="cornerRadius">999dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Widget.App.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="cornerRadius">999dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="elevation">4dp</item>
+    </style>
+    <style name="Widget.App.Button.Rounded" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="elevation">4dp</item>
+    </style>
+    <style name="Widget.App.Button.Secondary" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/primary</item>
+        <item name="backgroundTint">@color/primary_tint</item>
+        <item name="cornerRadius">999dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="elevation">0dp</item>
+    </style>
+    <style name="Widget.App.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="contentPadding">0dp</item>
+    </style>
+    <style name="Widget.App.Card.Elevated" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardElevation">6dp</item>
+        <item name="cardCornerRadius">16dp</item>
+    </style>
+    <style name="Widget.App.Card.Large" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">24dp</item>
+        <item name="contentPadding">0dp</item>
+    </style>
+    <style name="Widget.App.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/surface_container_low</item>
+        <item name="chipStrokeColor">@color/border</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipCornerRadius">999dp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+    <style name="Widget.App.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="thumbTint">@color/primary</item>
+        <item name="trackTint">@color/primary_light</item>
+    </style>
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/border</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="hintTextColor">@color/text_hint</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+    </style>
+    <style name="Widget.StudentLife.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+</resources>

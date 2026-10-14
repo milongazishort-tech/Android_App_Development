@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "55678118471",
+    "project_id": "student-life-observation-app",
+    "storage_bucket": "student-life-observation-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55678118471:android:9eb04cae4ef2b874f19f62",
+        "android_client_info": {
+          "package_name": "com.studentlife.tracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo-9dhhS8nr_bAgGpNYt_ek7vIhLtGqXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
